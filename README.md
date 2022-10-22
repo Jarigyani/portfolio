@@ -1,2 +1,2 @@
 # Portfolio site
-[Jarigani's portfolio site](https://jarigani.com)
+[Jarigani's portfolio site](https://jarigyani.com)
