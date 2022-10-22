@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 
 type Props = {
   src: string
@@ -31,11 +31,11 @@ const PixelateImage: FC<Props> = ({ src, size, enabled }) => (
 export default function PixelImage() {
   const [size, setSize] = useState(30)
 
-  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSize(() => parseInt(e.target.value))
-  }
+  // const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   setSize(() => parseInt(e.target.value))
+  // }
 
-  const countUp = () => {
+  useEffect(() => {
     const speed = 40
     let num = size
     setInterval(function () {
@@ -44,7 +44,18 @@ export default function PixelImage() {
         num -= 1
       }
     }, speed)
-  }
+  }, [size])
+
+  // const countUp = () => {
+  //   const speed = 40
+  //   let num = size
+  //   setInterval(function () {
+  //     if (num > 3) {
+  //       setSize(num - 1)
+  //       num -= 1
+  //     }
+  //   }, speed)
+  // }
 
   // useEffect(() => {
   //   if (size < 10) {
@@ -62,21 +73,22 @@ export default function PixelImage() {
   return (
     <>
       <PixelateImage
-        src="https://cdn.pixabay.com/photo/2021/03/02/01/07/cyberpunk-6061251_1280.jpg"
+        src="https://cdn.pixabay.com/photo/2017/01/28/02/24/japan-2014618_1280.jpg"
         size={size}
         enabled={true}
       />
-      <input
+      {/* <input
         type="range"
         min="3"
         max="30"
         value={size}
         className="range"
         onChange={handleOnChange}
-      />
-      <label className="btn" onClick={countUp}>
+      /> */}
+
+      {/* <label className="btn" onClick={countUp}>
         click
-      </label>
+      </label> */}
     </>
   )
 }
