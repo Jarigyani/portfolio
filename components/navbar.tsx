@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <div className="navbar absolute top-0">
+    <div className="navbar absolute top-0 bg-black md:bg-transparent">
       <div className="flex-none">
         <label
           htmlFor="my-drawer"
@@ -29,7 +29,7 @@ const Navbar = () => {
           Jarigyani
         </a>
       </div>
-      <div className="mr-5 flex-none">
+      <div className="invisible mr-5 flex-none md:visible">
         <div className="tooltip tooltip-bottom" data-tip="Github">
           <a
             href="https://github.com/Jarigyani"
