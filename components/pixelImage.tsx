@@ -9,7 +9,7 @@ type Props = {
 
 const PixelateImage: FC<Props> = ({ src, size, enabled }) => (
   <>
-    <svg className="relative h-full w-full bg-black">
+    <svg className="relative h-full w-full bg-black will-change-auto">
       <filter id="pixelate" x="0" y="0">
         <feFlood x={4} y={4} height={3} width={3} />
         <feComposite width={size * 2} height={size * 2} />
@@ -52,7 +52,7 @@ export default function PixelImage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5, delay: 1 }}
-          className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 text-center text-5xl text-white md:text-9xl"
+          className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 text-center text-5xl text-slate-200 drop-shadow-2xl md:text-9xl"
         >
           Jarigyani&apos;s
           <br />
