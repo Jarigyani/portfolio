@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const DrawerSide = () => {
   return (
     <>
@@ -11,8 +13,10 @@ const DrawerSide = () => {
             Close
           </label>
         </li>
-        <li>
-          <a className="text-3xl hover:text-white">Sidebar Item 1</a>
+        <li className="text-3xl">
+          <Link href={'/sample'} className="text-3xl hover:text-white">
+            Sidebar Item 1
+          </Link>
         </li>
         <li>
           <a className="text-3xl hover:text-white">Sidebar Item 2</a>
