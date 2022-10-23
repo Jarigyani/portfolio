@@ -31,15 +31,15 @@ const PixelateImage: FC<Props> = ({ src, size, enabled }) => (
 )
 
 export default function PixelImage() {
-  const [size, setSize] = useState(30)
+  const [size, setSize] = useState(40)
 
   useEffect(() => {
-    const speed = 40
+    const speed = 120
     let num = size
     setInterval(function () {
-      if (num > 3) {
-        setSize(num - 1)
-        num -= 1
+      if (num > 4) {
+        setSize(num - 2)
+        num -= 2
       }
     }, speed)
   }, [size])
