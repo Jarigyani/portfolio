@@ -1,6 +1,12 @@
-import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { FC } from 'react'
 
-const DrawerSide = () => {
+const DrawerSide: FC = () => {
+  const router = useRouter()
+  function pageOneClick() {
+    router.push('/sample')
+  }
+
   return (
     <>
       <label htmlFor="my-drawer" className="drawer-overlay"></label>
@@ -14,9 +20,13 @@ const DrawerSide = () => {
           </label>
         </li>
         <li className="text-3xl">
-          <Link href={'/sample'} className="text-3xl hover:text-white">
+          <label
+            htmlFor="my-drawer"
+            className="drawer-button hover:text-white"
+            onClick={pageOneClick}
+          >
             Sidebar Item 1
-          </Link>
+          </label>
         </li>
         <li>
           <a className="text-3xl hover:text-white">Sidebar Item 2</a>

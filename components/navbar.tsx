@@ -24,11 +24,13 @@ const Navbar = () => {
         </label>
       </div>
       <div className="flex-1 normal-case">
-        <div className="btn-ghost btn text-3xl hover:text-white">
-          <Link href={'/'}>Jarigyani</Link>
-        </div>
+        <Link href={'/'}>
+          <div className="btn-ghost btn text-3xl hover:text-white">
+            Jarigyani
+          </div>
+        </Link>
       </div>
-      <div className="invisible mr-5 flex-none md:visible">
+      <div className="invisible m-auto flex-none md:visible">
         <div className="tooltip tooltip-bottom" data-tip="Github">
           <div className="btn-ghost btn">
             <Link
