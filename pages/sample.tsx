@@ -1,3 +1,4 @@
+import DrawImage from '@/drawImages'
 import { motion } from 'framer-motion'
 import { NextPage } from 'next'
 
@@ -9,7 +10,7 @@ const Sample: NextPage = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="h-screen"></div>
+      <DrawImage />
     </motion.div>
   )
 }
