@@ -1,5 +1,4 @@
 import SplineModel from '@/splineModel'
-import TypicalAnim from '@/typicalAnim'
 import { motion } from 'framer-motion'
 import type { NextPage } from 'next'
 
@@ -14,8 +13,8 @@ const Home: NextPage = () => {
       <div className="absolute h-screen w-screen bg-base-300">
         <SplineModel />
       </div>
-      <div className="absolute top-20 left-10">
-        <TypicalAnim />
+      <div className="absolute left-0 bottom-0">
+        <h1 className="text-6xl md:text-8xl">ぽーとふぉりお つくりちゅう</h1>
       </div>
     </motion.div>
   )
