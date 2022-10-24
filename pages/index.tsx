@@ -9,12 +9,10 @@ const Home: NextPage = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
+      className="relative md:static"
     >
-      <div className="absolute h-screen w-screen bg-base-300">
+      <div className="h-96 w-screen bg-base-100 md:absolute md:h-screen">
         <SplineModel />
-      </div>
-      <div className="absolute left-0 bottom-0">
-        <h1 className="text-6xl md:text-8xl">ぽーとふぉりお つくりちゅう</h1>
       </div>
     </motion.div>
   )
