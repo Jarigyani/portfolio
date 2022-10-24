@@ -2,11 +2,11 @@ import Link from 'next/link'
 
 const Navbar = () => {
   return (
-    <div className="navbar absolute top-0 z-10 bg-black md:bg-transparent">
+    <div className="navbar absolute top-0 z-10 backdrop-blur-sm">
       <div className="flex-none">
         <label
           htmlFor="my-drawer"
-          className="drawer-button btn-ghost btn-square btn hover:text-white"
+          className="btn-ghost drawer-button btn-square btn hover:text-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

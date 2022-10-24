@@ -1,3 +1,4 @@
+import SplineModel from '@/splineModel'
 import { motion } from 'framer-motion'
 import type { NextPage } from 'next'
 
@@ -8,7 +9,11 @@ const Home: NextPage = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-    ></motion.div>
+    >
+      <div className="h-screen bg-base-300">
+        <SplineModel />
+      </div>
+    </motion.div>
   )
 }
 export default Home
