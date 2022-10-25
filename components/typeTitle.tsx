@@ -2,12 +2,12 @@ import Typewriter from 'typewriter-effect'
 
 const TypeTitle = () => {
   return (
-    <div>
+    <div className="mx-5 mb-3">
       <Typewriter
         onInit={(typewriter) => {
           typewriter
             .pauseFor(2000)
-            .typeString(`Jarigyani's<br>portfolio`)
+            .typeString(`Jarigyani's portfolio site`)
             .start()
         }}
       />

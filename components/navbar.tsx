@@ -23,11 +23,9 @@ const Navbar = () => {
           </svg>
         </label>
       </div>
-      <div className="flex-1 normal-case">
+      <div className="flex-1">
         <Link href={'/'}>
-          <div className="btn-ghost btn text-3xl hover:text-white">
-            Jarigyani
-          </div>
+          <div className="btn-ghost btn text-3xl hover:text-white">Home</div>
         </Link>
       </div>
       <div className="invisible m-auto flex-none md:visible">

@@ -10,7 +10,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        dot: ['VT323, sans-serif'],
+        dot: ['Oswald', 'sans-serif'],
       },
     },
   },

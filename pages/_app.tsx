@@ -7,7 +7,7 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <>
-      <div className="drawer font-dot font-bold">
+      <div className="drawer font-dot">
         <input id="my-drawer" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content">
           <Navbar />
