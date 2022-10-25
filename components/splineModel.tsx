@@ -20,6 +20,7 @@ const SplineModel = () => {
           initial={{ opacity: 0 }}
           animate={controls}
           exit={{ opacity: 0 }}
+          transition={{ duration: 1 }}
           className="h-full"
         >
           <Spline
