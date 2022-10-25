@@ -40,22 +40,22 @@ const Navbar = () => {
         </div>
         <div className="m-auto flex-none">
           <SwapTheme />
-          <div className="tooltip tooltip-bottom" data-tip="Github">
-            <div className="btn-ghost btn">
-              <Link
-                href="https://github.com/Jarigyani"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="btn-ghost btn"
-              >
+          <Link
+            href="https://github.com/Jarigyani"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="btn-ghost btn"
+          >
+            <div className="tooltip tooltip-bottom" data-tip="Github">
+              <div className="btn-ghost btn">
                 <img
                   className="w-10 rounded-full border-2 border-green-500 bg-base-300"
                   src="https://avatars.githubusercontent.com/u/98578563?s=400&u=557c7d92e931654fef9799f571cf0d9ba222e6ed&v=4"
                   alt="icon"
                 />
-              </Link>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </motion.div>

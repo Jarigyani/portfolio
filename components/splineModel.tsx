@@ -1,18 +1,16 @@
 import Spline from '@splinetool/react-spline'
 import { Application } from '@splinetool/runtime'
-import { motion } from 'framer-motion'
+import { motion, useAnimation } from 'framer-motion'
 import useGetWindowSize from 'hooks/getWindowSize'
-import { useState } from 'react'
 
 const SplineModel = () => {
+  const controls = useAnimation()
   const windowSize = useGetWindowSize()
-  const [hidden, setHidden] = useState('invisible')
   console.log(windowSize.width)
 
   const onload = (e: Application, size: number) => {
-    console.log(size)
+    controls.start({ opacity: 1 })
     e.setZoom(size)
-    setHidden('')
   }
 
   return (
@@ -20,9 +18,9 @@ const SplineModel = () => {
       {windowSize.width <= 767 && (
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className={`h-full ${hidden}`}
+          animate={controls}
+          exit={{ opacity: 0 }}
+          className="h-full"
         >
           <Spline
             scene="https://prod.spline.design/umXHqIO9PqlFHs3L/scene.splinecode"
@@ -37,7 +35,7 @@ const SplineModel = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className={`h-full  ${hidden}`}
+          className="h-full"
         >
           <Spline
             scene="https://prod.spline.design/umXHqIO9PqlFHs3L/scene.splinecode"
