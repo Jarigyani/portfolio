@@ -7,8 +7,10 @@ import { useState } from 'react'
 const SplineModel = () => {
   const windowSize = useGetWindowSize()
   const [hidden, setHidden] = useState('invisible')
+  console.log(windowSize.width)
 
   const onload = (e: Application, size: number) => {
+    console.log(size)
     e.setZoom(size)
     setHidden('')
   }
@@ -19,7 +21,7 @@ const SplineModel = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 2, delay: 1 }}
+          transition={{ duration: 1 }}
           className={`h-full ${hidden}`}
         >
           <Spline
@@ -34,7 +36,7 @@ const SplineModel = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 2, delay: 1 }}
+          transition={{ duration: 1 }}
           className={`h-full  ${hidden}`}
         >
           <Spline
