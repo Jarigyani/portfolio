@@ -10,7 +10,7 @@ const TypeTitle = () => {
       transition={{ duration: 0.5 }}
       className="pointer-events-none m-auto -mt-20 w-max rounded-xl bg-white/[.06] text-2xl leading-snug tracking-wider backdrop-blur-md md:text-6xl"
     >
-      <div className="mx-5 mb-1 md:mb-3">
+      <div className="mx-5 pb-1 md:pb-3">
         <Typewriter
           onInit={(typewriter) => {
             typewriter

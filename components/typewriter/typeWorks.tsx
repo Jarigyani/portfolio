@@ -10,7 +10,7 @@ const TypeWorks = () => {
       transition={{ duration: 0.5 }}
       className="pointer-events-none absolute bottom-10 left-1/2 w-max -translate-x-1/2 rounded-xl bg-white/[.06] text-2xl leading-snug tracking-wider backdrop-blur-md md:text-6xl"
     >
-      <div className="mx-5 mb-1 md:mb-3">
+      <div className="mx-5 pb-1 md:pb-3">
         <Typewriter
           onInit={(typewriter) => {
             typewriter.typeString(`My works ↓`).start()
