@@ -5,9 +5,9 @@ import SwapTheme from './swapTheme'
 const Navbar = () => {
   return (
     <motion.div
-      initial={{ y: -60 }}
-      animate={{ y: 0 }}
-      transition={{ delay: 1 }}
+      initial={{ opacity: 0, y: -70 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 1, duration: 0.5 }}
       className="navbar absolute top-0 z-10 m-auto backdrop-blur-sm"
     >
       <div className="mx-auto w-full max-w-[900px]">

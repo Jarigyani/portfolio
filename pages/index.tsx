@@ -18,10 +18,9 @@ const Home: NextPage = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
         transition={{ duration: 0.5 }}
-        className="mx-auto w-[900px] md:flex"
       >
-        <div className="mx-auto md:flex">
-          <div className="image-full card m-5 w-96 bg-base-100 shadow-xl">
+        <div className="mx-auto max-w-[900px] md:flex">
+          <div className="image-full card m-5 mx-auto w-96 bg-base-100 shadow-xl">
             <figure>
               <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
             </figure>
@@ -33,7 +32,7 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="image-full card m-5 w-96 bg-base-100 shadow-xl">
+          <div className="image-full card m-5 mx-auto w-96 bg-base-100 shadow-xl">
             <figure>
               <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
             </figure>
