@@ -14,7 +14,7 @@ const DrawerSide: FC = () => {
         <li>
           <label
             htmlFor="my-drawer"
-            className="drawer-button w-max bg-primary text-3xl hover:bg-primary hover:text-white md:bg-base-100"
+            className="drawer-button w-max bg-primary text-3xl"
           >
             Close
           </label>

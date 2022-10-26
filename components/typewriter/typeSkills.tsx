@@ -13,7 +13,7 @@ const TypeSkills = () => {
       <div className="mx-5 mb-1 md:mb-3">
         <Typewriter
           onInit={(typewriter) => {
-            typewriter.pauseFor(1000).typeString(`My skills ↓`).start()
+            typewriter.typeString(`My skills ↓`).start()
           }}
         />
       </div>
