@@ -1,5 +1,6 @@
 import DrawerSide from '@/drawerSide'
 import Navbar from '@/navbar'
+import SplineModel from '@/splineModel'
 import { AnimatePresence } from 'framer-motion'
 import { useDarkmode } from 'hooks/store'
 import type { AppProps } from 'next/app'
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
         <Navbar />
+        <SplineModel />
         <AnimatePresence mode="wait">
           <Component {...pageProps} key={router.asPath} />
         </AnimatePresence>

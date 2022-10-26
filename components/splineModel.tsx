@@ -6,7 +6,6 @@ import useGetWindowSize from 'hooks/getWindowSize'
 const SplineModel = () => {
   const controls = useAnimation()
   const windowSize = useGetWindowSize()
-  console.log(windowSize.width)
 
   const onload = (e: Application, size: number) => {
     controls.start({ opacity: 1 })
@@ -14,12 +13,11 @@ const SplineModel = () => {
   }
 
   return (
-    <div className="h-full">
+    <div className="h-[400px] md:h-[600px]">
       {windowSize.width <= 767 && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={controls}
-          exit={{ opacity: 0 }}
           transition={{ duration: 1 }}
           className="h-full"
         >
@@ -34,7 +32,7 @@ const SplineModel = () => {
       {windowSize.width > 767 && (
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={controls}
           transition={{ duration: 1 }}
           className="h-full"
         >

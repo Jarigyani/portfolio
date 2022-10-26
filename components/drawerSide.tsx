@@ -3,8 +3,8 @@ import { FC } from 'react'
 
 const DrawerSide: FC = () => {
   const router = useRouter()
-  function pageOneClick() {
-    router.push('/sample')
+  function pageOneClick(locale: string) {
+    router.push(`/${locale}`)
   }
 
   return (
@@ -14,7 +14,7 @@ const DrawerSide: FC = () => {
         <li>
           <label
             htmlFor="my-drawer"
-            className="drawer-button w-max text-3xl hover:bg-primary hover:text-white"
+            className="drawer-button w-max bg-primary text-3xl hover:bg-primary hover:text-white md:bg-base-100"
           >
             Close
           </label>
@@ -23,13 +23,19 @@ const DrawerSide: FC = () => {
           <label
             htmlFor="my-drawer"
             className="drawer-button hover:text-white"
-            onClick={pageOneClick}
+            onClick={() => pageOneClick('skills')}
           >
-            Sidebar Item 1
+            Skills
           </label>
         </li>
-        <li>
-          <a className="text-3xl hover:text-white">Sidebar Item 2</a>
+        <li className="text-3xl">
+          <label
+            htmlFor="my-drawer"
+            className="drawer-button hover:text-white"
+            onClick={() => pageOneClick('works')}
+          >
+            Works
+          </label>
         </li>
       </ul>
     </>
