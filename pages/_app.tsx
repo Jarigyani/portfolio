@@ -1,4 +1,5 @@
 import DrawerSide from '@/drawerSide'
+import Footer from '@/footer'
 import Navbar from '@/navbar'
 import SplineModel from '@/splineModel'
 import { AnimatePresence } from 'framer-motion'
@@ -20,6 +21,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         <AnimatePresence mode="wait">
           <Component {...pageProps} key={router.asPath} />
         </AnimatePresence>
+        <Footer />
       </div>
       <div className="drawer-side">
         <DrawerSide />

@@ -1,9 +1,13 @@
 import TypeTitle from '@/typewriter/typeTitle'
-import { motion } from 'framer-motion'
+import { motion, useAnimation } from 'framer-motion'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
 const Home: NextPage = () => {
+  const controles = useAnimation()
+  const onLoadImages = () => {
+    controles.start({ opacity: 1, y: 0 })
+  }
   const siteTitle = 'Jarigyani'
   return (
     <>
@@ -15,14 +19,18 @@ const Home: NextPage = () => {
       </div>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={controles}
         exit={{ opacity: 0, y: 50 }}
         transition={{ duration: 0.5 }}
       >
         <div className="mx-auto max-w-[900px] md:flex">
           <div className="image-full card m-5 mx-auto w-96 bg-base-100 shadow-xl">
             <figure>
-              <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
+              <img
+                onLoad={() => onLoadImages()}
+                src="https://placeimg.com/400/225/arch"
+                alt="Shoes"
+              />
             </figure>
             <div className="card-body">
               <h2 className="card-title">Sample1!</h2>
