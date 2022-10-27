@@ -16,11 +16,13 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     >
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
-        <Navbar />
-        <SplineModel />
-        <AnimatePresence mode="wait">
-          <Component {...pageProps} key={router.asPath} />
-        </AnimatePresence>
+        <div className="min-h-screen">
+          <Navbar />
+          <SplineModel />
+          <AnimatePresence mode="wait">
+            <Component {...pageProps} key={router.asPath} />
+          </AnimatePresence>
+        </div>
         <Footer />
       </div>
       <div className="drawer-side">
