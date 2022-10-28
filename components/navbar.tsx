@@ -38,14 +38,14 @@ const Navbar = () => {
             </div>
           </Link>
         </div>
-        <div className="flex-2">
+        <div className="flex-2 hidden md:flex">
           <Link href={'/skills'}>
             <div className="btn-ghost btn text-3xl normal-case hover:text-white">
               Skills
             </div>
           </Link>
         </div>
-        <div className="flex-2">
+        <div className="flex-2 hidden md:flex">
           <Link href={'/works'}>
             <div className="btn-ghost btn text-3xl normal-case hover:text-white">
               Works
