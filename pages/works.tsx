@@ -10,7 +10,7 @@ const Home: NextPage = () => {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <div className="absolute left-1/2">
+      <div className="left-1/2">
         <TypeWorks />
       </div>
       <SampleContents />

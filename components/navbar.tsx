@@ -38,6 +38,20 @@ const Navbar = () => {
             </div>
           </Link>
         </div>
+        <div className="flex-2">
+          <Link href={'/skills'}>
+            <div className="btn-ghost btn text-3xl normal-case hover:text-white">
+              Skills
+            </div>
+          </Link>
+        </div>
+        <div className="flex-2">
+          <Link href={'/works'}>
+            <div className="btn-ghost btn text-3xl normal-case hover:text-white">
+              Works
+            </div>
+          </Link>
+        </div>
         <div className="m-auto flex-none">
           <SwapTheme />
           <Link
