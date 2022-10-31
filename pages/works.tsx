@@ -1,7 +1,8 @@
 import SampleContents from '@/sampleContents'
-import TypeWorks from '@/typewriter/typeWorks'
+import TypeTexts from '@/typeTexts'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Typewriter from 'typewriter-effect'
 
 const Home: NextPage = () => {
   const siteTitle = 'Jarigyani'
@@ -11,7 +12,13 @@ const Home: NextPage = () => {
         <title>{siteTitle}</title>
       </Head>
       <div className="left-1/2">
-        <TypeWorks />
+        <TypeTexts>
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter.typeString(`My works ↓`).start()
+            }}
+          />
+        </TypeTexts>
       </div>
       <SampleContents />
     </>

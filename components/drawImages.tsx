@@ -17,6 +17,8 @@ const draw = {
 }
 
 const DrawImage: FC = () => {
+  const y = { a: 10 }
+  console.log(y)
   return (
     <motion.svg
       width="600"
