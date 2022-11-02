@@ -1,4 +1,4 @@
-import SampleContents from '@/sampleContents'
+import SkillProgress from '@/skillProgress'
 import TypeTexts from '@/typeTexts'
 import type { NextPage } from 'next'
 import Head from 'next/head'
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
           />
         </TypeTexts>
       </div>
-      <SampleContents />
+      <SkillProgress />
     </>
   )
 }
