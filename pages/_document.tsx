@@ -15,6 +15,10 @@ class Document extends NextDocument {
             href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap"
             rel="stylesheet"
           />
+          <link
+            href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&display=optional"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

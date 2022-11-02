@@ -10,7 +10,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        dot: ['Oswald', 'sans-serif'],
+        dot: ['Oswald', 'Sawarabi Mincho', 'sans-serif'],
       },
     },
   },
