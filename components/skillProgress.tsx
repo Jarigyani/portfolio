@@ -25,10 +25,10 @@ const SkillProgress = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 50 }}
       transition={{ duration: 0.5 }}
-      className="m-5 text-3xl md:text-6xl"
+      className="m-5"
     >
-      <div className="my-12 mx-auto md:w-[900px]">
-        <h2 className="my-5">Languages</h2>
+      <div className="my-12 mx-auto md:max-w-[900px]">
+        <h2 className="my-5 text-3xl md:text-6xl">Languages</h2>
         <ul>
           <Progress name="JavaScript" progress={90} />
           <Progress name="Dart" progress={80} />
@@ -37,7 +37,7 @@ const SkillProgress = () => {
         </ul>
       </div>
       <div className="my-12 mx-auto md:w-[900px]">
-        <h2 className="my-5">Frameworks/Libraries</h2>
+        <h2 className="my-5 text-3xl md:text-6xl">Frameworks/Libraries</h2>
         <ul>
           <Progress name="React" progress={80} />
           <Progress name="Next" progress={70} />
@@ -47,7 +47,7 @@ const SkillProgress = () => {
         </ul>
       </div>
       <div className="my-12 mx-auto md:w-[900px]">
-        <h2 className="my-5">Services</h2>
+        <h2 className="my-5 text-3xl md:text-6xl">Services</h2>
         <ul>
           <Progress name="Supabase" progress={70} />
           <Progress name="Firebase" progress={70} />
