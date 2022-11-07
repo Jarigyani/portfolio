@@ -17,18 +17,13 @@ const Introduction = () => {
         className="mx-auto mt-10 w-[310px] justify-between md:mt-20 md:flex md:w-[900px]"
       >
         <div className="max-w-[400px]">
-          <h2 className="mb-5 text-xl font-bold">バイクが好き</h2>
-          <p>
-            バイクは乗ってよし弄ってよし見てよしの三拍子が揃った最高の趣味です。
-            <br />
-            休日はよく遠出して平日の疲れを癒しています。特に疲れることはありませんが。
-            <br />
-            メインバイクは2019年製のGixxer150です。
-            <br />
-            かなりカスタムしておりノーマル時の面影はほぼありません。
-            <br />
-            かなり思い出の詰まった車体なので死ぬまで直しながら乗ることでしょう。
-          </p>
+          <h2 className="mb-5 text-xl font-bold">好きなもの</h2>
+          <ul>
+            <li>バイク</li>
+            <li>わいわい</li>
+            <li>ウルフルズ</li>
+            <li>ゲーム</li>
+          </ul>
         </div>
         <div className="mt-5">
           <Image

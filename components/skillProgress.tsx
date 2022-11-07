@@ -9,11 +9,16 @@ const Progress: FC<Props> = (props) => {
   return (
     <li>
       <p className="text-lg">{props.name}</p>
-      <progress
-        className="progress progress-primary bg-slate-100"
-        value={props.progress}
-        max="100"
-      />
+      <div
+        className="tooltip tooltip-primary w-full md:tooltip-left"
+        data-tip={props.progress}
+      >
+        <progress
+          className="progress progress-primary bg-slate-100"
+          value={props.progress}
+          max="100"
+        />
+      </div>
     </li>
   )
 }
