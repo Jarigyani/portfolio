@@ -1,6 +1,5 @@
 import Introduction from '@/introduction'
 import TypeTexts from '@/typeTexts'
-import 'atropos/css'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Typewriter from 'typewriter-effect'
