@@ -39,9 +39,9 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex-2 hidden md:flex">
-          <Link href={'/404'}>
+          <Link href={'/blog'}>
             <div className="btn-ghost btn text-3xl normal-case hover:text-white">
-              404
+              Blog
             </div>
           </Link>
         </div>
