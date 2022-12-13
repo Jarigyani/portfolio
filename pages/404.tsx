@@ -7,7 +7,7 @@ export default function Custom404() {
         <TypeTexts>
           <Typewriter
             onInit={(typewriter) => {
-              typewriter.pauseFor(1000).typeString(`404:NotFound`).start()
+              typewriter.pauseFor(1000).typeString(`404: NotFound`).start()
             }}
           />
         </TypeTexts>
