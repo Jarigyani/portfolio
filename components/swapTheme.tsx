@@ -3,7 +3,7 @@ import { useDarkmode } from 'hooks/store'
 const SwapTheme = () => {
   const onChange = useDarkmode((state) => state.setDarkmode)
   return (
-    <label className="swap-rotate swap">
+    <label className="swap swap-rotate">
       <input type="checkbox" onChange={() => onChange()} />
       <svg
         className="swap-on h-10 w-10 fill-current"

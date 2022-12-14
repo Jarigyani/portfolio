@@ -3,6 +3,11 @@ import Link from 'next/link'
 import SwapTheme from './swapTheme'
 
 const Navbar = () => {
+  const handleOnChangePage = () => {
+    if (typeof window !== undefined) {
+      window.scroll({ top: 0 })
+    }
+  }
   return (
     <motion.div
       initial={{ opacity: 0, y: -70 }}
@@ -31,7 +36,7 @@ const Navbar = () => {
             </svg>
           </label>
         </div>
-        <div className="flex-1">
+        <div className="flex-1" onClick={handleOnChangePage}>
           <Link href={'/'}>
             <div className="btn-ghost btn text-3xl normal-case hover:text-white">
               Jarigyani

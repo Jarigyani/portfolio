@@ -1,3 +1,4 @@
+import Layout from '@/Layout'
 import Link from 'next/link'
 import { Contents } from 'types/types'
 import { client } from '../libs/client'
@@ -8,7 +9,7 @@ type Props = {
 
 export default function Home({ blogs }: Props) {
   return (
-    <div>
+    <Layout text="Blog">
       <ul className="mx-auto w-96">
         {blogs.map((blog) => (
           <li key={blog.id}>
@@ -18,7 +19,7 @@ export default function Home({ blogs }: Props) {
           </li>
         ))}
       </ul>
-    </div>
+    </Layout>
   )
 }
 

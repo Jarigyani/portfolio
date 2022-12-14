@@ -1,8 +1,7 @@
+import Layout from '@/Layout'
 import SkillProgress from '@/skillProgress'
-import TypeTexts from '@/typeTexts'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Typewriter from 'typewriter-effect'
 
 const Home: NextPage = () => {
   const siteTitle = 'Jarigyani'
@@ -11,16 +10,9 @@ const Home: NextPage = () => {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <div className="left-1/2">
-        <TypeTexts>
-          <Typewriter
-            onInit={(typewriter) => {
-              typewriter.typeString(`My skills ↓`).start()
-            }}
-          />
-        </TypeTexts>
-      </div>
-      <SkillProgress />
+      <Layout text="Skills">
+        <SkillProgress />
+      </Layout>
     </>
   )
 }

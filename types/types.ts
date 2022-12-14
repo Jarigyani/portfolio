@@ -19,6 +19,7 @@ export type Contents = {
     width: number
   }
   category: Category[]
+  'toc-visible': boolean
 }
 
 export type Category = {

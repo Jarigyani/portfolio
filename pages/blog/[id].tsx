@@ -1,3 +1,4 @@
+import Layout from '@/Layout'
 import { renderToc } from '@/render-toc'
 import cheerio from 'cheerio'
 import hljs from 'highlight.js'
@@ -18,28 +19,30 @@ export default function BlogId({ content, highlightedBody }: Props) {
     target?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
   return (
-    <div>
-      {toc.map((toc) => (
-        <p key={toc.id} onClick={() => handleOnClick(toc.id)}>
-          {toc.text}
-        </p>
-      ))}
-      <div className="prose mx-auto">
-        <h1 className="rounded-lg bg-zinc-800 p-2">{content.title}</h1>
+    <Layout text={content.title}>
+      <div className="prose max-w-none">
         <Image
           src={content.eyecatch.url}
           width={content.eyecatch.width}
           height={content.eyecatch.height}
           alt="eyecatch"
         />
-        <p>{content.publishedAt}</p>
+        <p className="flex justify-end">{content.publishedAt}</p>
+
+        <div>
+          {toc.map((toc) => (
+            <p key={toc.id} onClick={() => handleOnClick(toc.id)} className="">
+              {toc.text}
+            </p>
+          ))}
+        </div>
         <div
           dangerouslySetInnerHTML={{
             __html: `${highlightedBody}`,
           }}
         />
       </div>
-    </div>
+    </Layout>
   )
 }
 

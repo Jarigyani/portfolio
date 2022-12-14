@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import { FC } from 'react'
 
 type Props = {
@@ -25,13 +24,7 @@ const Progress: FC<Props> = (props) => {
 
 const SkillProgress = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 50 }}
-      transition={{ duration: 0.5 }}
-      className="m-5"
-    >
+    <div className="m-5">
       <div className="my-12 mx-auto md:max-w-[900px]">
         <h2 className="my-5 text-3xl md:text-6xl">Languages</h2>
         <ul>
@@ -60,7 +53,7 @@ const SkillProgress = () => {
           <Progress name="AWS" progress={20} />
         </ul>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
