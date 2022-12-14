@@ -13,7 +13,7 @@ const SplineModel = () => {
   }
 
   return (
-    <div className="h-[400px] md:h-[600px]">
+    <div className="h-[400px] md:h-[600px]" id="model">
       {windowSize.width <= 767 && (
         <motion.div
           initial={{ opacity: 0 }}

@@ -1,5 +1,6 @@
+import BlogCard from '@/BlogCard'
 import Layout from '@/Layout'
-import Link from 'next/link'
+import { useEffect } from 'react'
 import { Contents } from 'types/types'
 import { client } from '../libs/client'
 
@@ -8,15 +9,27 @@ type Props = {
 }
 
 export default function Home({ blogs }: Props) {
+  useEffect(() => {
+    const target = document.getElementById('model')
+    target?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }, [])
+
   return (
     <Layout text="Blog">
-      <ul className="mx-auto w-96">
+      <ul className="mx-auto flex w-full justify-between">
         {blogs.map((blog) => (
-          <li key={blog.id}>
-            <Link href={`/blog/${blog.id}`}>
-              <a>{blog.title}</a>
-            </Link>
-          </li>
+          // <li key={blog.id}>
+          //   <Link href={`/blog/${blog.id}`}>
+          //     <a>{blog.title}</a>
+          //   </Link>
+          // </li>
+          <BlogCard
+            src={blog.eyecatch.url}
+            alt={blog.id}
+            content="test of content"
+            title={blog.title}
+            key={blog.id}
+          />
         ))}
       </ul>
     </Layout>

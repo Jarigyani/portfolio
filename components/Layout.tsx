@@ -14,7 +14,7 @@ const Layout = ({ text, children }: Props) => {
       exit={{ opacity: 0, y: 50 }}
       transition={{ duration: 0.5 }}
     >
-      <h1 className="pointer-events-none m-auto -mt-24 w-max rounded-xl bg-white/[.06] text-2xl leading-snug tracking-wider backdrop-blur-md md:text-6xl">
+      <h1 className="pointer-events-none m-auto -mt-12 w-max rounded-xl bg-white/[.06] text-2xl leading-snug tracking-wider backdrop-blur-md md:text-6xl">
         <div className="mx-5 pb-1 md:pb-3">
           <Typewriter
             onInit={(typewriter) => {
@@ -23,7 +23,9 @@ const Layout = ({ text, children }: Props) => {
           />
         </div>
       </h1>
-      <div>{children}</div>
+      <div className="mx-auto my-10 max-w-[900px] rounded-xl bg-base-200 p-5">
+        {children}
+      </div>
     </motion.div>
   )
 }

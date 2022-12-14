@@ -4,6 +4,7 @@ import cheerio from 'cheerio'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/hybrid.css'
 import Image from 'next/image'
+import { useEffect } from 'react'
 import { Blog, Contents } from 'types/types'
 import { client } from '../../libs/client'
 
@@ -18,9 +19,15 @@ export default function BlogId({ content, highlightedBody }: Props) {
     const target = document.getElementById(id)
     target?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
+
+  useEffect(() => {
+    const target = document.getElementById('model')
+    target?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }, [])
+
   return (
     <Layout text={content.title}>
-      <div className="prose max-w-none">
+      <div className="prose max-w-none prose-headings:underline prose-pre:bg-[#1D1F21] prose-img:rounded-md">
         <Image
           src={content.eyecatch.url}
           width={content.eyecatch.width}
@@ -30,11 +37,18 @@ export default function BlogId({ content, highlightedBody }: Props) {
         <p className="flex justify-end">{content.publishedAt}</p>
 
         <div>
-          {toc.map((toc) => (
-            <p key={toc.id} onClick={() => handleOnClick(toc.id)} className="">
-              {toc.text}
-            </p>
-          ))}
+          <p>Contents</p>
+          <ul>
+            {toc.map((toc) => (
+              <li
+                key={toc.id}
+                onClick={() => handleOnClick(toc.id)}
+                className=""
+              >
+                {toc.text}
+              </li>
+            ))}
+          </ul>
         </div>
         <div
           dangerouslySetInnerHTML={{

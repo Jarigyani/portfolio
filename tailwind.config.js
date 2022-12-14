@@ -6,7 +6,7 @@ module.exports = {
   ],
   theme: {
     daisyui: {
-      themes: ['halloween'],
+      themes: [],
     },
     extend: {
       fontFamily: {

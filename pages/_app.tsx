@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <div
       className="drawer font-dot"
-      data-theme={`${darkmode ? 'halloween' : 'light'}`}
+      data-theme={`${darkmode ? 'business' : 'light'}`}
     >
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
