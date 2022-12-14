@@ -19,6 +19,12 @@
       "@/*": ["components/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "libs/client.js",
+    "components/render-toc.js"
+  ],
   "exclude": ["node_modules"]
 }

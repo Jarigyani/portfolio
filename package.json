@@ -11,8 +11,10 @@
   "dependencies": {
     "@splinetool/react-spline": "^2.2.3",
     "@splinetool/runtime": "^0.9.128",
+    "cheerio": "^1.0.0-rc.12",
     "daisyui": "^2.33.0",
     "framer-motion": "^7.6.1",
+    "highlight.js": "^11.7.0",
     "lottie-react": "^2.3.1",
     "microcms-js-sdk": "^2.3.2",
     "next": "12.3.1",

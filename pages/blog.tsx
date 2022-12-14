@@ -9,7 +9,7 @@ type Props = {
 export default function Home({ blogs }: Props) {
   return (
     <div>
-      <ul>
+      <ul className="mx-auto w-96">
         {blogs.map((blog) => (
           <li key={blog.id}>
             <Link href={`/blog/${blog.id}`}>
