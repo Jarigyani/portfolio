@@ -27,7 +27,7 @@ export default function BlogId({ content, highlightedBody }: Props) {
 
   return (
     <Layout text={content.title}>
-      <div className="prose max-w-none prose-headings:underline prose-pre:bg-[#1D1F21] prose-img:rounded-md">
+      <div className="prose max-w-none prose-headings:scroll-mt-16 prose-headings:underline prose-pre:bg-[#1D1F21] prose-img:rounded-md">
         <Image
           src={content.eyecatch.url}
           width={content.eyecatch.width}
