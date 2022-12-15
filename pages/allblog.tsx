@@ -18,9 +18,6 @@ export default function Home({ blogs }: Props) {
     <Layout text="Blog">
       <ul className="mx-auto flex w-full justify-between">
         {blogs.map((blog) => {
-          if (blog.category[0].id === 'gakkou') {
-            return
-          }
           return (
             <BlogCard
               src={blog.eyecatch.url}

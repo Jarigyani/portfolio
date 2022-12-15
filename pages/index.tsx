@@ -1,12 +1,10 @@
 import Layout from '@/Layout'
 import { useAnimation } from 'framer-motion'
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect } from 'react'
 
 const Home: NextPage = () => {
-  const siteTitle = 'Jarigyani'
   const controles = useAnimation()
   const onLoadImages = () => {
     controles.start({ opacity: 1, y: 0 })
@@ -18,9 +16,6 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
       <Layout text="I'm frontend engineer">
         <div>
           <h2 className="mb-5 text-xl font-bold">好きなもの</h2>
