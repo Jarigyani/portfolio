@@ -23,7 +23,7 @@ export default function Home({ blogs }: Props) {
           }
           return (
             <BlogCard
-              src={blog.eyecatch.url}
+              eyecatch={blog.eyecatch}
               alt={blog.id}
               description={blog.description}
               title={blog.title}

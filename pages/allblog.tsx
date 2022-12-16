@@ -20,7 +20,7 @@ export default function Home({ blogs }: Props) {
         {blogs.map((blog) => {
           return (
             <BlogCard
-              src={blog.eyecatch.url}
+              eyecatch={blog.eyecatch}
               alt={blog.id}
               description={blog.description}
               title={blog.title}
