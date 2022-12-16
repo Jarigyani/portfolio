@@ -24,7 +24,7 @@
     "**/*.ts",
     "**/*.tsx",
     "libs/client.js",
-    "components/render-toc.js"
+    "components/render-toc.ts"
   ],
   "exclude": ["node_modules"]
 }

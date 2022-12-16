@@ -11,7 +11,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Layout text="Skills">
+      <Layout text="Skills" typestring="Skills">
         <SkillProgress />
       </Layout>
     </>

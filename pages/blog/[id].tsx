@@ -1,4 +1,4 @@
-import Layout from '@/Layout'
+import BlogLayout from '@/BlogLayout'
 import { renderToc } from '@/render-toc'
 import cheerio from 'cheerio'
 import hljs from 'highlight.js'
@@ -12,13 +12,21 @@ type Props = {
   content: Contents
   highlightedBody: string
 }
+// type Toc = {
+//   text: string
+//   id: string
+//   name: string
+// }
 
 export default function BlogId({ content, highlightedBody }: Props) {
   const toc = renderToc(content.content)
-  const handleOnClick = (id: string) => {
-    const target = document.getElementById(id)
-    target?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
+  // const handleOnClick = (id: string) => {
+  //   const target = document.getElementById(id)
+  //   target?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  // }
+
+  const pdate = new Date(content.publishedAt)
+  const udate = new Date(content.updatedAt)
 
   useEffect(() => {
     const target = document.getElementById('model')
@@ -26,37 +34,53 @@ export default function BlogId({ content, highlightedBody }: Props) {
   }, [])
 
   return (
-    <Layout text={content.title}>
-      <div className="prose max-w-none prose-headings:scroll-mt-16 prose-headings:underline prose-pre:bg-[#1D1F21] prose-img:rounded-md">
+    <BlogLayout text={content.title} toc={toc}>
+      <div className="relative text-gray-500">
         <Image
           src={content.eyecatch.url}
           width={content.eyecatch.width}
           height={content.eyecatch.height}
           alt="eyecatch"
+          className="rounded-md"
         />
-        <p className="flex justify-end">{content.publishedAt}</p>
-
-        <div>
-          <p>Contents</p>
+        <p className="absolute bottom-10 right-2 flex justify-end">
+          Published at {pdate.toDateString()}
+        </p>
+        <p className="absolute bottom-3 right-2 flex justify-end">
+          Updated at {udate.toDateString()}
+        </p>
+      </div>
+      <div className="prose max-w-none prose-headings:scroll-mt-16 prose-h1:underline prose-pre:bg-[#1D1F21] prose-img:rounded-md">
+        {/* <div>
+          <p className="text-xl underline">List of contents</p>
           <ul>
-            {toc.map((toc) => (
-              <li
-                key={toc.id}
-                onClick={() => handleOnClick(toc.id)}
-                className=""
-              >
-                {toc.text}
-              </li>
-            ))}
+            {toc.map((toc) => {
+              if (toc.name === 'h1') {
+                return (
+                  <li
+                    key={toc.id}
+                    onClick={() => handleOnClick(toc.id)}
+                    className="text-xl"
+                  >
+                    {toc.text}
+                  </li>
+                )
+              }
+              return (
+                <ul key={toc.id} onClick={() => handleOnClick(toc.id)}>
+                  <li className="text-md">{toc.text}</li>
+                </ul>
+              )
+            })}
           </ul>
-        </div>
+        </div> */}
         <div
           dangerouslySetInnerHTML={{
             __html: `${highlightedBody}`,
           }}
         />
       </div>
-    </Layout>
+    </BlogLayout>
   )
 }
 

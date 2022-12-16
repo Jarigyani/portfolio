@@ -7,6 +7,7 @@ export const renderToc = (body) => {
   const toc = headings.map((data) => ({
     text: data.children[0].data,
     id: data.attribs.id,
+    name: data.name,
   }))
 
   return toc

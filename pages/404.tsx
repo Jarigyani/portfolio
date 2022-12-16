@@ -6,5 +6,5 @@ export default function Custom404() {
     target?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }, [])
 
-  return <Layout text="404: Not found" />
+  return <Layout text="404" typestring="404: Not found" />
 }

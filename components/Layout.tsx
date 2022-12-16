@@ -6,8 +6,9 @@ import Typewriter from 'typewriter-effect'
 type Props = {
   text: string
   children?: ReactNode
+  typestring: string
 }
-const Layout = ({ text, children }: Props) => {
+const Layout = ({ text, children, typestring }: Props) => {
   return (
     <>
       <Head>
@@ -23,12 +24,12 @@ const Layout = ({ text, children }: Props) => {
           <div className="mx-5 pb-1 md:pb-3">
             <Typewriter
               onInit={(typewriter) => {
-                typewriter.pauseFor(1000).typeString(text).start()
+                typewriter.pauseFor(1000).typeString(typestring).start()
               }}
             />
           </div>
         </h1>
-        <div className="mx-auto my-10 max-w-[900px] rounded-xl bg-base-200 p-5">
+        <div className="my-10 mx-auto max-w-[1200px] rounded-xl bg-base-200 p-5">
           {children}
         </div>
       </motion.div>

@@ -20,6 +20,7 @@ export type Contents = {
   }
   category: Category[]
   'toc-visible': boolean
+  'type-string': string
 }
 
 export type Category = {

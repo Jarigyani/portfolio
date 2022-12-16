@@ -15,7 +15,7 @@ export default function Home({ blogs }: Props) {
   }, [])
 
   return (
-    <Layout text="Blog">
+    <Layout text="Blog" typestring="Blog">
       <ul className="mx-auto flex w-full justify-between">
         {blogs.map((blog) => {
           if (blog.category[0].id === 'gakkou') {

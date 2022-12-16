@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <Layout text="Works"></Layout>
+      <Layout text="Works" typestring="Works"></Layout>
     </>
   )
 }
