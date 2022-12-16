@@ -25,13 +25,13 @@ const BlogLayout = ({ text, children, toc }: Props) => {
         transition={{ duration: 0.5 }}
         className="mx-auto max-w-[1300px] justify-between p-5 lg:flex"
       >
-        <div className="rounded-xl bg-base-200 p-5 lg:w-[calc(100%_-_300px)]">
+        <div className="rounded-xl bg-base-200 p-5 shadow-md lg:w-[calc(100%_-_300px)]">
           <div className="mb-5 md:mb-10">
             <p className="text-center text-xl md:text-6xl">{text}</p>
           </div>
           {children}
         </div>
-        <div className="sticky top-20 hidden h-max w-72 rounded-xl bg-base-200 p-5 lg:block">
+        <div className="sticky top-20 hidden h-max w-72 rounded-xl bg-base-200 p-5 shadow-md lg:block">
           <p className="underline">List of contents</p>
           <ul className="ml-3 list-disc">
             {toc.map((toc) => {

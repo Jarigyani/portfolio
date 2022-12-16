@@ -35,7 +35,7 @@ export default function BlogId({ content, highlightedBody }: Props) {
 
   return (
     <BlogLayout text={content.title} toc={toc}>
-      <div className="relative text-gray-500">
+      <div className="relative mb-10 text-gray-500">
         <Image
           src={content.eyecatch.url}
           width={content.eyecatch.width}
