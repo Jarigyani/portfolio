@@ -12,18 +12,9 @@ type Props = {
   content: Contents
   highlightedBody: string
 }
-// type Toc = {
-//   text: string
-//   id: string
-//   name: string
-// }
 
 export default function BlogId({ content, highlightedBody }: Props) {
   const toc = renderToc(content.content)
-  // const handleOnClick = (id: string) => {
-  //   const target = document.getElementById(id)
-  //   target?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  // }
 
   const pdate = new Date(content.publishedAt)
   const udate = new Date(content.updatedAt)
@@ -34,8 +25,8 @@ export default function BlogId({ content, highlightedBody }: Props) {
   }, [])
 
   return (
-    <BlogLayout text={content.title} toc={toc}>
-      <div className="relative mb-10 text-gray-500">
+    <BlogLayout text={content.title} toc={toc} categories={content.category}>
+      <div className="relative mb-10 h-max text-gray-500 shadow-lg">
         <Image
           src={content.eyecatch.url}
           width={content.eyecatch.width}
@@ -50,30 +41,7 @@ export default function BlogId({ content, highlightedBody }: Props) {
           Updated at {udate.toDateString()}
         </p>
       </div>
-      <div className="prose max-w-none prose-headings:scroll-mt-16 prose-h1:underline prose-pre:bg-[#1D1F21] prose-img:rounded-md">
-        {/* <div>
-          <p className="text-xl underline">List of contents</p>
-          <ul>
-            {toc.map((toc) => {
-              if (toc.name === 'h1') {
-                return (
-                  <li
-                    key={toc.id}
-                    onClick={() => handleOnClick(toc.id)}
-                    className="text-xl"
-                  >
-                    {toc.text}
-                  </li>
-                )
-              }
-              return (
-                <ul key={toc.id} onClick={() => handleOnClick(toc.id)}>
-                  <li className="text-md">{toc.text}</li>
-                </ul>
-              )
-            })}
-          </ul>
-        </div> */}
+      <div className="prose max-w-none prose-headings:scroll-mt-16 prose-h1:underline prose-pre:bg-[#1D1F21] prose-pre:shadow-md  prose-img:rounded-md prose-img:shadow-md">
         <div
           dangerouslySetInnerHTML={{
             __html: `${highlightedBody}`,

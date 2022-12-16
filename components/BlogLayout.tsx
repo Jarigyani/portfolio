@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion'
 import Head from 'next/head'
 import { ReactNode } from 'react'
+import { Category } from 'types/types'
 
 type Props = {
   text: string
   children?: ReactNode
   toc: { text: string; id: string; name: string }[]
+  categories: Category[]
 }
-const BlogLayout = ({ text, children, toc }: Props) => {
+const BlogLayout = ({ text, children, toc, categories }: Props) => {
   const handleOnClick = (id: string) => {
     const target = document.getElementById(id)
     target?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -31,34 +33,46 @@ const BlogLayout = ({ text, children, toc }: Props) => {
           </div>
           {children}
         </div>
-        <div className="sticky top-20 hidden h-max w-72 rounded-xl bg-base-200 p-5 shadow-md lg:block">
-          <p className="underline">List of contents</p>
-          <ul className="ml-3 list-disc">
-            {toc.map((toc) => {
-              if (toc.name === 'h1') {
-                return (
-                  <li
-                    key={toc.id}
-                    onClick={() => handleOnClick(toc.id)}
-                    className="text-md mb-1"
-                  >
-                    <button>{toc.text}</button>
-                  </li>
-                )
-              }
+        <div>
+          <div className="mb-5 hidden h-max w-72 rounded-xl bg-base-200 p-5 shadow-md lg:block">
+            <p className="mb-3 text-xl">Categories</p>
+            {categories.map((cat) => {
               return (
-                <ul
-                  key={toc.id}
-                  onClick={() => handleOnClick(toc.id)}
-                  className="ml-5 list-disc"
-                >
-                  <li className="text-sm">
-                    <button>{toc.text}</button>
-                  </li>
-                </ul>
+                <div key={cat.id} className="badge mr-2">
+                  {cat.name}
+                </div>
               )
             })}
-          </ul>
+          </div>
+          <div className="sticky top-20 hidden h-max w-72 rounded-xl bg-base-200 p-5 shadow-md lg:block">
+            <p className="mb-5 underline">List of contents</p>
+            <ul className="ml-3 list-disc">
+              {toc.map((toc) => {
+                if (toc.name === 'h1') {
+                  return (
+                    <li
+                      key={toc.id}
+                      onClick={() => handleOnClick(toc.id)}
+                      className="text-md mb-1"
+                    >
+                      <button>{toc.text}</button>
+                    </li>
+                  )
+                }
+                return (
+                  <ul
+                    key={toc.id}
+                    onClick={() => handleOnClick(toc.id)}
+                    className="ml-5 list-disc"
+                  >
+                    <li className="text-sm">
+                      <button>{toc.text}</button>
+                    </li>
+                  </ul>
+                )
+              })}
+            </ul>
+          </div>
         </div>
       </motion.div>
     </>
