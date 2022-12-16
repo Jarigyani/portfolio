@@ -33,8 +33,8 @@ const BlogLayout = ({ text, children, toc, categories }: Props) => {
           </div>
           {children}
         </div>
-        <div>
-          <div className="mb-5 hidden h-max w-72 rounded-xl bg-base-200 p-5 shadow-md lg:block">
+        <div className="hidden lg:block">
+          <div className="mb-5 h-max w-72 rounded-xl bg-base-200 p-5 shadow-md">
             <p className="mb-3 text-xl">Categories</p>
             {categories.map((cat) => {
               return (
@@ -44,9 +44,9 @@ const BlogLayout = ({ text, children, toc, categories }: Props) => {
               )
             })}
           </div>
-          <div className="sticky top-20 hidden h-max w-72 rounded-xl bg-base-200 p-5 shadow-md lg:block">
-            <p className="mb-5 underline">List of contents</p>
-            <ul className="ml-3 list-disc">
+          <div className="sticky top-20 h-max w-72 rounded-xl bg-base-200 p-5 shadow-md">
+            <p className="mb-5 text-xl">👻 List of contents</p>
+            <ul className="ml-4 list-disc">
               {toc.map((toc) => {
                 if (toc.name === 'h1') {
                   return (
@@ -63,9 +63,9 @@ const BlogLayout = ({ text, children, toc, categories }: Props) => {
                   <ul
                     key={toc.id}
                     onClick={() => handleOnClick(toc.id)}
-                    className="ml-5 list-disc"
+                    className="ml-2 list-disc"
                   >
-                    <li className="text-sm">
+                    <li className="mb-1 text-sm opacity-70">
                       <button>{toc.text}</button>
                     </li>
                   </ul>

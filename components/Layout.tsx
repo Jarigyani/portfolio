@@ -29,8 +29,10 @@ const Layout = ({ text, children, typestring }: Props) => {
             />
           </div>
         </h1>
-        <div className="my-10 mx-auto max-w-[1200px] rounded-xl bg-base-200 p-5">
-          {children}
+        <div className="mx-5">
+          <div className="my-10 mx-auto max-w-[1200px] rounded-xl bg-base-200 p-5">
+            {children}
+          </div>
         </div>
       </motion.div>
     </>
