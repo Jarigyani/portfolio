@@ -8,6 +8,7 @@ type Props = {
   children?: ReactNode
   typestring: string
 }
+
 const Layout = ({ text, children, typestring }: Props) => {
   return (
     <>
