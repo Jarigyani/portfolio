@@ -4,9 +4,9 @@ type Props = {
   src: string
   alt: string
   title: string
-  content: string
+  description: string
 }
-const BlogCard = ({ src, alt, title, content }: Props) => {
+const BlogCard = ({ src, alt, title, description }: Props) => {
   return (
     <Link href={`/blog/${alt}`}>
       <div
@@ -18,7 +18,7 @@ const BlogCard = ({ src, alt, title, content }: Props) => {
         </figure>
         <div className="card-body">
           <h2 className="card-title">{title}</h2>
-          <p>{content}</p>
+          <p>{description}</p>
           {/* <div className="card-actions justify-end"> */}
           <button className="btn-primary btn"> Read Now</button>
         </div>
