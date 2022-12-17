@@ -7,7 +7,7 @@ const Navbar = () => {
     <motion.div
       initial={{ opacity: 0, y: -70 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 1, duration: 0.5 }}
+      transition={{ delay: 0.5, duration: 0.5 }}
       className="navbar sticky top-0 z-50 bg-base-200"
     >
       <div className="mx-auto w-full">
@@ -54,7 +54,7 @@ const Navbar = () => {
         </div> */}
         <div className="m-auto flex-none">
           <SwapTheme />
-          <Link href={'/about'}>
+          <Link href="/about" target="_blank" rel="noreferrer noopener">
             <div className="tooltip tooltip-bottom" data-tip="About me">
               <div className="btn-ghost btn">
                 <img
