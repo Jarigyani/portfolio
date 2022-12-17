@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Layout text="Jarigyani" typestring="I'm frontend engineer">
+      <Layout text="About" typestring="I'm frontend engineer">
         <SkillProgress />
       </Layout>
     </>
