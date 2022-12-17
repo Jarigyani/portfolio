@@ -38,11 +38,7 @@ module.exports = {
         'light',
       ],
     },
-    extend: {
-      fontFamily: {
-        myfont: ['var(--font-inter)'],
-      },
-    },
+    extend: {},
   },
   plugins: [require('daisyui'), require('@tailwindcss/typography')],
 }

@@ -54,7 +54,7 @@ const Navbar = () => {
         </div> */}
         <div className="m-auto flex-none">
           <SwapTheme />
-          <Link href="/about" target="_blank" rel="noreferrer noopener">
+          <Link href={'/about'}>
             <div className="tooltip tooltip-bottom" data-tip="About me">
               <div className="btn-ghost btn">
                 <img

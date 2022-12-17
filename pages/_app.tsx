@@ -16,25 +16,29 @@ const inter = Noto_Serif_JP({
 function MyApp({ Component, pageProps, router }: AppProps) {
   const darkmode = useDarkmode((state) => state.darkmode)
   return (
-    <main className={`${inter.variable} font-myfont`}>
-      <div className="drawer" data-theme={`${darkmode ? 'dark' : 'light'}`}>
-        <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content">
-          <div id="model" />
-          <div className="min-h-screen">
-            <Navbar />
-            {/* <SplineModel /> */}
-            <AnimatePresence mode="wait">
-              <Component {...pageProps} key={router.asPath} />
-            </AnimatePresence>
-          </div>
-          <Footer />
+    <div className="drawer" data-theme={`${darkmode ? 'dark' : 'light'}`}>
+      {/* tailwindを通すと日本語フォントが不安定なので直接読み込み */}
+      <style jsx global>{`
+        html {
+          font-family: ${inter.style.fontFamily};
+        }
+      `}</style>
+      <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+      <div className="drawer-content">
+        <div id="model" />
+        <div className="min-h-screen">
+          <Navbar />
+          {/* <SplineModel /> */}
+          <AnimatePresence mode="wait">
+            <Component {...pageProps} key={router.asPath} />
+          </AnimatePresence>
         </div>
-        <div className="drawer-side">
-          <DrawerSide />
-        </div>
+        <Footer />
       </div>
-    </main>
+      <div className="drawer-side">
+        <DrawerSide />
+      </div>
+    </div>
   )
 }
 
