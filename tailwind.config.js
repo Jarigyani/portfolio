@@ -40,7 +40,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        dot: ['Oswald', 'Sawarabi Mincho', 'sans-serif'],
+        myfont: ['var(--font-inter)'],
       },
     },
   },
