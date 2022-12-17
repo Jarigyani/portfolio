@@ -30,8 +30,8 @@ const Layout = ({ text, children, typestring }: Props) => {
             />
           </div>
         </h1>
-        <div className="mx-5">
-          <div className="my-10 mx-auto w-max max-w-[1200px] rounded-xl bg-base-200 p-5">
+        <div className="my-10 mx-5">
+          <div className="mx-auto flex w-max max-w-[1300px] justify-center rounded-xl bg-base-200 p-5">
             {children}
           </div>
         </div>

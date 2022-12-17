@@ -10,7 +10,7 @@ const DrawerSide: FC = () => {
   return (
     <>
       <label htmlFor="my-drawer" className="drawer-overlay"></label>
-      <ul className="menu w-80 overflow-y-auto border-r-2 border-base-100 p-4 text-base-content backdrop-blur-md">
+      <ul className="menu w-80 border-base-100 bg-base-100 p-4 text-base-content">
         <li>
           <label
             htmlFor="my-drawer"

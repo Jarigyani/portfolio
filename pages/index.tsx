@@ -17,16 +17,16 @@ const Home: NextPage = () => {
   return (
     <>
       <Layout text="Jarigyani" typestring="I'm frontend engineer">
-        <div>
-          <h2 className="mb-5 text-xl font-bold">好きなもの</h2>
-          <ul>
-            <li>バイク</li>
-            <li>わいわい</li>
-            <li>ウルフルズ</li>
-            <li>ゲーム</li>
-          </ul>
-        </div>
-        <div>
+        <div className="justify-center md:flex">
+          <div className="md:mr-10">
+            <h2 className="mb-5 text-xl font-bold">好きなもの</h2>
+            <ul className="list-disc">
+              <li>バイク</li>
+              <li>わいわい</li>
+              <li>ウルフルズ</li>
+              <li>ゲーム</li>
+            </ul>
+          </div>
           <Image
             src={'/images/bike.webp'}
             alt="bike"

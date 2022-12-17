@@ -28,7 +28,7 @@ const Mokuji = ({ categories, toc }: Props) => {
       </div>
       <div className="sticky top-20 h-max w-72 rounded-xl bg-base-200 p-5 shadow-md">
         <div className="mb-5 flex justify-between" onClick={handleOnClickTop}>
-          <span className="text-xl">👻 List of contents</span>
+          <button className="text-xl">👻 List of contents</button>
         </div>
         <ul className="ml-4 list-disc">
           {toc.map((toc) => {

@@ -16,7 +16,7 @@ export default function Home({ blogs }: Props) {
 
   return (
     <Layout text="Blog" typestring="Blog">
-      <ul className="justify-center md:flex">
+      <ul className="grid justify-center gap-6 md:flex">
         {blogs.map((blog) => {
           return (
             <BlogCard
@@ -25,6 +25,7 @@ export default function Home({ blogs }: Props) {
               description={blog.description}
               title={blog.title}
               key={blog.id}
+              cats={blog.category}
             />
           )
         })}

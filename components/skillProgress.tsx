@@ -24,8 +24,8 @@ const Progress: FC<Props> = (props) => {
 
 const SkillProgress = () => {
   return (
-    <div className="m-5">
-      <div className="my-12 mx-auto md:max-w-[900px]">
+    <div className="w-[900px]">
+      <div className="my-12 mx-auto">
         <h2 className="my-5 text-3xl md:text-6xl">Languages</h2>
         <ul>
           <Progress name="JavaScript" progress={90} />
@@ -34,7 +34,7 @@ const SkillProgress = () => {
           <Progress name="Go" progress={50} />
         </ul>
       </div>
-      <div className="my-12 mx-auto md:max-w-[900px]">
+      <div className="my-12 mx-auto">
         <h2 className="my-5 text-3xl md:text-6xl">Frameworks/Libraries</h2>
         <ul>
           <Progress name="React" progress={80} />
@@ -44,7 +44,7 @@ const SkillProgress = () => {
           <Progress name="Nest" progress={40} />
         </ul>
       </div>
-      <div className="my-12 mx-auto md:max-w-[900px]">
+      <div className="my-12 mx-auto">
         <h2 className="my-5 text-3xl md:text-6xl">Services</h2>
         <ul>
           <Progress name="Supabase" progress={70} />
