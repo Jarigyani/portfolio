@@ -25,7 +25,16 @@ const DrawerSide: FC = () => {
             className="drawer-button hover:text-white"
             onClick={() => pageOneClick('')}
           >
-            Blog
+            Home
+          </label>
+        </li>
+        <li className="text-3xl">
+          <label
+            htmlFor="my-drawer"
+            className="drawer-button hover:text-white"
+            onClick={() => pageOneClick('about')}
+          >
+            About
           </label>
         </li>
       </ul>
