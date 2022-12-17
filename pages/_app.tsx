@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       {/* tailwindを通すと日本語フォントが不安定なので直接読み込み */}
       <style jsx global>{`
         html {
-          font-family: ${inter.style.fontFamily};
+          font-family: ${inter.style.fontFamily}, serif;
         }
       `}</style>
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
