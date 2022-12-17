@@ -23,7 +23,7 @@ const BlogLayout = ({ text, children, toc, categories }: Props) => {
         transition={{ duration: 0.5 }}
         className="mx-auto max-w-[1300px] justify-between p-5 lg:flex"
       >
-        <div className="rounded-xl bg-base-200 p-5 shadow-md lg:w-[calc(100%_-_300px)]">
+        <div className="rounded-xl bg-base-200 p-5 shadow-md lg:w-[calc(100%_-_305px)]">
           <div className="mb-5 md:mb-10">
             <p className="text-center text-xl md:text-6xl">{text}</p>
           </div>
