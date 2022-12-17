@@ -19,7 +19,7 @@ const Layout = ({ text, children }: Props) => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
         transition={{ duration: 0.5 }}
-        className="mx-5"
+        className="sm:mx-5"
       >
         <div className="mx-auto max-w-5xl">
           <div className="my-5 mx-auto flex justify-center">{children}</div>
