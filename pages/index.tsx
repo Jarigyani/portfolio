@@ -16,11 +16,11 @@ export default function Home({ blogs }: Props) {
 
   return (
     <Layout text="Blog" typestring="Blog">
-      <div className="max-w-max justify-center rounded-lg bg-base-200 sm:p-5">
+      <div className="max-w-max justify-center rounded-lg sm:bg-base-200">
         <div>
-          <h1 className="mb-5 text-center text-3xl md:text-6xl">Articles</h1>
+          <h1 className="my-5 text-center text-3xl md:text-6xl">Articles</h1>
         </div>
-        <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid grid-cols-1 gap-6 sm:m-5 md:grid-cols-2 lg:grid-cols-3">
           {blogs.map((blog) => {
             if (blog.category[0].id === 'gakkou') {
               return
