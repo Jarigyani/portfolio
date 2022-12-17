@@ -16,7 +16,7 @@ export default function Home({ blogs }: Props) {
   }, [])
 
   return (
-    <Layout text="Blog" typestring="Jarigyani">
+    <Layout text="Jarigyani">
       <div className="max-w-max justify-center rounded-lg sm:bg-base-200">
         <div>
           <h1 className="my-5 text-center text-3xl md:text-6xl">Articles</h1>

@@ -8,7 +8,7 @@ export default function Custom404() {
   }, [])
 
   return (
-    <Layout text="404" typestring="404: Not found">
+    <Layout text="404">
       <SplineModel />
     </Layout>
   )

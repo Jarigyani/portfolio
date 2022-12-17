@@ -5,7 +5,6 @@ import { ReactNode } from 'react'
 type Props = {
   text: string
   children?: ReactNode
-  typestring: string
 }
 
 const Layout = ({ text, children }: Props) => {
