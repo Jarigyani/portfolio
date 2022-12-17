@@ -6,7 +6,22 @@ module.exports = {
   ],
   theme: {
     daisyui: {
-      themes: [],
+      themes: [
+        {
+          rebecca: {
+            primary: '#ff0d45',
+            secondary: '#0d59ff',
+            accent: '#f97fb2',
+            neutral: '#b3fff6',
+            'base-100': '#262e40',
+            info: '#3A85D4',
+            success: '#5BECDB',
+            warning: '#fef08a',
+            error: '#f87171',
+          },
+        },
+        'light',
+      ],
     },
     extend: {
       fontFamily: {

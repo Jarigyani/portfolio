@@ -3,17 +3,12 @@ import Link from 'next/link'
 import SwapTheme from './swapTheme'
 
 const Navbar = () => {
-  const handleOnChangePage = () => {
-    if (typeof window !== undefined) {
-      window.scroll({ top: 0 })
-    }
-  }
   return (
     <motion.div
       initial={{ opacity: 0, y: -70 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1, duration: 0.5 }}
-      className="navbar sticky top-0 z-10 m-auto backdrop-blur-md"
+      className="navbar sticky top-0 z-10 bg-base-200"
     >
       <div className="mx-auto w-full">
         <div className="flex-none">
@@ -36,21 +31,14 @@ const Navbar = () => {
             </svg>
           </label>
         </div>
-        <div className="flex-1" onClick={handleOnChangePage}>
+        <div className="flex-1">
           <Link href={'/'}>
             <div className="btn-ghost btn text-3xl normal-case hover:text-white">
               Jarigyani
             </div>
           </Link>
         </div>
-        <div className="flex-2 hidden md:flex">
-          <Link href={'/blog'}>
-            <div className="btn-ghost btn text-3xl normal-case hover:text-white">
-              Blog
-            </div>
-          </Link>
-        </div>
-        <div className="flex-2 hidden md:flex">
+        {/* <div className="flex-2 hidden md:flex">
           <Link href={'/skills'}>
             <div className="btn-ghost btn text-3xl normal-case hover:text-white">
               Skills
@@ -63,16 +51,11 @@ const Navbar = () => {
               Works
             </div>
           </Link>
-        </div>
+        </div> */}
         <div className="m-auto flex-none">
           <SwapTheme />
-          <Link
-            href="https://github.com/Jarigyani"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="btn-ghost btn"
-          >
-            <div className="tooltip tooltip-bottom" data-tip="Github">
+          <Link href="/about" target="_blank" rel="noreferrer noopener">
+            <div className="tooltip tooltip-bottom" data-tip="About me">
               <div className="btn-ghost btn">
                 <img
                   className="w-10 rounded-full border-2 border-green-500 bg-base-300"

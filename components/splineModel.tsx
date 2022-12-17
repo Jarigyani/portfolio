@@ -13,7 +13,7 @@ const SplineModel = () => {
   }
 
   return (
-    <div className="h-[400px] md:h-[600px]" id="model">
+    <div className="relative h-[400px] w-[900px] md:h-[600px]" id="model">
       {windowSize.width <= 767 && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -44,6 +44,7 @@ const SplineModel = () => {
           />
         </motion.div>
       )}
+      <h1 className="absolute top-0 text-9xl">404: Not found</h1>
     </div>
   )
 }
