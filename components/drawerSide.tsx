@@ -23,25 +23,7 @@ const DrawerSide: FC = () => {
           <label
             htmlFor="my-drawer"
             className="drawer-button hover:text-white"
-            onClick={() => pageOneClick('skills')}
-          >
-            Skills
-          </label>
-        </li>
-        <li className="text-3xl">
-          <label
-            htmlFor="my-drawer"
-            className="drawer-button hover:text-white"
-            onClick={() => pageOneClick('works')}
-          >
-            Works
-          </label>
-        </li>
-        <li className="text-3xl">
-          <label
-            htmlFor="my-drawer"
-            className="drawer-button hover:text-white"
-            onClick={() => pageOneClick('blog')}
+            onClick={() => pageOneClick('')}
           >
             Blog
           </label>
