@@ -1,5 +1,6 @@
 import BlogCard from '@/BlogCard'
 import Layout from '@/Layout'
+import { GetStaticProps } from 'next'
 import { useEffect } from 'react'
 import { Contents } from 'types/types'
 import { client } from '../libs/client'
@@ -43,7 +44,7 @@ export default function Home({ blogs }: Props) {
 }
 
 // データをテンプレートに受け渡す部分の処理を記述します
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const data = await client.get({ endpoint: 'blogs' })
 
   return {

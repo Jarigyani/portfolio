@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/font": "^13.0.7",
     "@splinetool/react-spline": "^2.2.3",
     "@splinetool/runtime": "^0.9.128",
     "cheerio": "^1.0.0-rc.12",
