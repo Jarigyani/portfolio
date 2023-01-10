@@ -8,7 +8,7 @@ const Navbar = () => {
       initial={{ opacity: 0, y: -70 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5, duration: 0.5 }}
-      className="navbar sticky top-0 z-50 bg-base-200"
+      className="navbar sticky top-0 z-50 bg-base-200/70 backdrop-blur-md"
     >
       <div className="mx-auto w-full">
         <div className="flex-none">
