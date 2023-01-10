@@ -34,12 +34,10 @@ export default function BlogId({ content, highlightedBody }: Props) {
           alt="eyecatch"
           className="rounded-md"
         />
-        <p className="absolute bottom-10 right-2 flex justify-end">
-          Published at {pdate.toDateString()}
-        </p>
-        <p className="absolute bottom-3 right-2 flex justify-end">
-          Updated at {udate.toDateString()}
-        </p>
+        <div className="absolute bottom-3 right-2 justify-end rounded-md bg-slate-500 p-3 text-white">
+          <p>Published at {pdate.toDateString()}</p>
+          <p>Updated at {udate.toDateString()}</p>
+        </div>
       </div>
       <div className="prose max-w-none prose-headings:scroll-mt-16 prose-h1:underline prose-pre:bg-[#1D1F21] prose-pre:shadow-md  prose-img:rounded-md prose-img:shadow-md">
         <div
