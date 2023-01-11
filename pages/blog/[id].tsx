@@ -64,17 +64,17 @@ export const getStaticProps = async (context: { params: { id: string } }) => {
   const data = await client.get({ endpoint: 'blogs', contentId: id })
 
   // highlight.jsの処理
-  const $ = cheerio.load(data.content)
-  $('pre code').each((_, elm) => {
-    const result = hljs.highlightAuto($(elm).text())
-    $(elm).html(result.value)
-    $(elm).addClass('hljs')
+  const main = cheerio.load(data.content)
+  main('pre code').each((_, elm) => {
+    const result = hljs.highlightAuto(main(elm).text())
+    main(elm).html(result.value)
+    main(elm).addClass('hljs')
   })
 
   return {
     props: {
       content: data,
-      highlightedBody: $.html(),
+      highlightedBody: main.html(),
     },
   }
 }
