@@ -1,6 +1,8 @@
 import DrawerSide from '@/drawerSide'
 import Footer from '@/footer'
+import MDXComponents from '@/MDXComponents'
 import Navbar from '@/navbar'
+import { MDXProvider } from '@mdx-js/react'
 import { Noto_Serif_JP } from '@next/font/google'
 import { AnimatePresence } from 'framer-motion'
 import { useDarkmode } from 'hooks/store'
@@ -14,6 +16,7 @@ const inter = Noto_Serif_JP({
 })
 
 function MyApp({ Component, pageProps, router }: AppProps) {
+  const { components } = MDXComponents()
   const darkmode = useDarkmode((state) => state.darkmode)
   return (
     <div className="drawer" data-theme={`${darkmode ? 'dark' : 'light'}`}>
@@ -30,7 +33,9 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           <Navbar />
           {/* <SplineModel /> */}
           <AnimatePresence mode="wait">
-            <Component {...pageProps} key={router.asPath} />
+            <MDXProvider components={components}>
+              <Component {...pageProps} key={router.asPath} />
+            </MDXProvider>
           </AnimatePresence>
         </div>
         <Footer />

@@ -1,0 +1,49 @@
+import MLayout from '@/MLayout'
+import Image from 'next/image'
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/themes/prism-tomorrow.min.css" rel="stylesheet"/>
+
+# GFM
+
+![alttext](/images/bike.webp)
+
+## code blocks
+
+```js
+  return (
+    <Layout text="404">
+      <SplineModel />
+      {/* <img
+        src="http://drive.google.com/uc?export=view&id=14mVwcrKOEebmRYYgRToaIS0X1hUfwQAy"
+        alt=""
+      /> */}
+    </Layout>
+  )
+```
+
+## Autolink literals
+
+www.example.com, https://example.com, and contact@example.com.
+
+## Footnote
+
+A note[^1]
+
+[^1]: Big note.
+
+## Strikethrough
+
+~one~ or ~~two~~ tildes.
+
+## Table
+
+| test a | test b | test c | test d |
+| - | - | - | - |
+| a | b | c | d |
+
+## Tasklist
+
+* [ ] to do
+* [x] done
+
+export default ({children}) => <MLayout text="test">{children}</MLayout>

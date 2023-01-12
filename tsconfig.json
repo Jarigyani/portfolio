@@ -25,6 +25,6 @@
     "**/*.tsx",
     "libs/client.js",
     "components/render-toc.ts"
-  ],
+, "components/MDXComponents.js"  ],
   "exclude": ["node_modules"]
 }

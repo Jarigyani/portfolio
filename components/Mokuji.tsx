@@ -2,7 +2,7 @@ import { Category } from 'types/types'
 
 type Props = {
   categories: Category[]
-  toc: { text: string; id: string; name: string }[]
+  toc?: { text: string; id: string; name: string }[]
 }
 const Mokuji = ({ categories, toc }: Props) => {
   const handleOnClick = (id: string) => {
@@ -31,30 +31,31 @@ const Mokuji = ({ categories, toc }: Props) => {
           <button className="text-xl">👻 List of contents</button>
         </div>
         <ul className="ml-4 list-disc">
-          {toc.map((toc) => {
-            if (toc.name === 'h1') {
+          {toc &&
+            toc.map((toc) => {
+              if (toc.name === 'h1') {
+                return (
+                  <li
+                    key={toc.id}
+                    onClick={() => handleOnClick(toc.id)}
+                    className="text-md mb-1"
+                  >
+                    <button>{toc.text}</button>
+                  </li>
+                )
+              }
               return (
-                <li
+                <ul
                   key={toc.id}
                   onClick={() => handleOnClick(toc.id)}
-                  className="text-md mb-1"
+                  className="ml-2 list-disc"
                 >
-                  <button>{toc.text}</button>
-                </li>
+                  <li className="mb-1 text-sm opacity-70">
+                    <button>{toc.text}</button>
+                  </li>
+                </ul>
               )
-            }
-            return (
-              <ul
-                key={toc.id}
-                onClick={() => handleOnClick(toc.id)}
-                className="ml-2 list-disc"
-              >
-                <li className="mb-1 text-sm opacity-70">
-                  <button>{toc.text}</button>
-                </li>
-              </ul>
-            )
-          })}
+            })}
         </ul>
       </div>
     </div>

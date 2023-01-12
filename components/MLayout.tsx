@@ -1,16 +1,13 @@
+import { ReactNode } from '@mdx-js/react/lib'
 import { motion } from 'framer-motion'
 import Head from 'next/head'
-import { ReactNode } from 'react'
-import { Category } from 'types/types'
-import Mokuji from './Mokuji'
 
 type Props = {
   text: string
-  children?: ReactNode
-  toc?: { text: string; id: string; name: string }[]
-  categories?: Category[]
+  children: ReactNode
 }
-const BlogLayout = ({ text, children, toc, categories }: Props) => {
+
+const MLayout = ({ text, children }: Props) => {
   return (
     <>
       <Head>
@@ -23,16 +20,15 @@ const BlogLayout = ({ text, children, toc, categories }: Props) => {
         transition={{ duration: 0.5 }}
         className="mx-auto max-w-[1300px] justify-between p-5 lg:flex"
       >
-        <div className="rounded-xl bg-base-200 p-5 shadow-md lg:w-[calc(100%_-_305px)]">
+        <div className="rounded-xl p-5 lg:w-[calc(100%_-_305px)]">
           <div className="mb-5 md:mb-10">
             <p className="text-center text-xl md:text-6xl">{text}</p>
           </div>
-          {children}
+          <div className=""> {children}</div>
         </div>
-        {categories && <Mokuji categories={categories} toc={toc} />}
       </motion.div>
     </>
   )
 }
 
-export default BlogLayout
+export default MLayout
